@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Технологии Бурения Взрывных Скважин</title>
+    <style>
+        :root {
+            --primary-color: #1B5E20; 
+            --secondary-color: #43A047; 
+            --light-bg: #f1f8e9; 
+            --text-main: #333;
+            --text-light: #e8f5e9;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --spacing-unit: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-main);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            margin-bottom: var(--spacing-unit);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 40px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color); 
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff; 
+            border: 2px solid #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            color: #e8f5e9;
+        }
+
+        .nav-links a:hover {
+            color: #a5d6a7; 
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .goals-section {
+            background-color: white;
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .goal-card {
+            background: var(--light-bg);
+            padding: 25px;
+            border-radius: 4px;
+            transition: transform 0.3s;
+        }
+
+        .goal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(27, 94, 32, 0.1);
+        }
+
+        .goal-card h3 {
+            color: var(--primary-color);
+        }
+
+        .structure-list {
+            margin-top: 30px;
+            background-color: #2e3b2e; 
+            color: #e8f5e9;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .structure-list h3 {
+            color: var(--secondary-color);
+            border-bottom: 1px solid #4caf50;
+            padding-bottom: 10px;
+        }
+
+        .structure-list ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .structure-list li::before {
+            content: "✓";
+            color: var(--secondary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+        }
+
+        .process-section {
+            background-color: #ffffff;
+        }
+
+        .process-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .tab-btn {
+            background: #e0e0e0;
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-btn:hover {
+            background: #c8e6c9;
+        }
+
+        .tab-btn.active {
+            background: white;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        .process-content {
+            display: none; 
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            animation: fadeIn 0.5s ease;
+            border: 1px solid #c8e6c9;
+        }
+
+        .process-content.active {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .process-text ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .process-img img {
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(27, 94, 32, 0.15);
+            border: 2px solid white;
+        }
+
+        .table-section {
+            background-color: var(--light-bg);
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #c8e6c9;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background-color: #f1f8e9; 
+        }
+
+        footer {
+            background-color: #0d2810; 
+            color: #a5d6a7;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 5px solid var(--secondary-color);
+        }
+
+        footer p {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">БВСТЕХ</div>
+                <div class="nav-links">
+                    <a href="web.html">Цели</a>
+                    <a href="web2.html">Процесс</a>
+                    <a href="web3.html">Оборудование</a>
+                    <a href="web4.html">Сравнение</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="process" class="process-section">
+        <div class="container">
+            <h2 style="text-align: center; display: block;">Технический процесс</h2>
+            
+            <div class="process-tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'open-pit')">Карьерные работы</button>
+                <button class="tab-btn" onclick="openTab(event, 'underground')">Подземные работы</button>
+            </div>
+
+            <div id="open-pit" class="process-content active">
+                <div class="process-text">
+                    <h3>Открытый способ добычи</h3>
+                    <p>Карьерное бурение характеризуется большой глубиной скважин (до 30-50 метров) и большим диаметром (до 250 мм). Основной метод — вращательное бурение с очисткой забоя сжатым воздухом.</p>
+                    <h4>Этапы процесса:</h4>
+                    <ul>
+                        <li><strong>Подготовка площадки:</strong> Выравнивание бурстанка.</li>
+                        <li><strong>Бурение:</strong> Погружение бурового става под воздействием осевого усилия и вращения.</li>
+                        <li><strong>Продувка:</strong> Удаление буровой мелочи (шлама) сжатым воздухом.</li>
+                        <li><strong>Заряжание:</strong> Механизированная зарядка скважин гранулированным ВВ.</li>
+                    </ul>
+                </div>
+                <div class="process-img">
+                    <img src="карьер.jpg" alt="Карьерные буровзрывные работы">
+                </div>
+            </div>
+
+
+
+            <div id="underground" class="process-content">
+                <div class="process-text">
+                    <h3>Подземный способ добычи</h3>
+                    <p>В стесненных условиях шахт используются компактные самоходные установки. Глубина скважин обычно меньше (до 20-30 метров), но требования к вентиляции и пылеподавлению выше.</p>
+                    <h4>Особенности:</h4>
+                    <ul>
+                        <li><strong>Маневренность:</strong> Использование низкопрофильной техники.</li>
+                        <li><strong>Тип бурения:</strong> Часто применяется ударно-вращательное бурение.</li>
+                        <li><strong>Безопасность:</strong> Обязательное наличие систем искрогашения.</li>
+                        <li><strong>Крепление:</strong> Бурение шпуров для крепления выработок (анкерное крепление).</li>
+                    </ul>
+                </div>
+                <div class="process-img">
+                    <img src="подземные.jpg" alt="Подземные буровзрывные работы">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="table" class="table-section">
+        <div class="container">
+            <h2>Типы карьерных буровых станков</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Тип станка</th>
+                            <th>Примеры моделей</th>
+                            <th>Диаметр (мм)</th>
+                            <th>Производительность (м/смену)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Шарочные</strong></td>
+                            <td>СБШ-250, DM45, PV-235</td>
+                            <td>215-320</td>
+                            <td>40-70</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Пневмоударные (DTH)</strong></td>
+                            <td>KL-15, ROC L8</td>
+                            <td>110-203</td>
+                            <td>50-90</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Вращательные</strong></td>
+                            <td>БТС-150, DR411</td>
+                            <td>150-250</td>
+                            <td>30-60</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+<section id="table" class="table-section">
+        <div class="container">
+            <h2>Типы подземных буровых установок</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Тип установки</th>
+                            <th>Примеры моделей</th>
+                            <th>Диаметр (мм)</th>
+                            <th>Глубина (м)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Буровые каретки (веерные)</strong></td>
+                            <td>Simba M7, Solo 7-7</td>
+                            <td>48-102</td>
+                            <td>10-30</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Пневмоударники DTH</strong></td>
+                            <td>COP 66, Secoroc</td>
+                            <td>51-89</td>
+                            <td>15-40</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Перфораторы на пневмоподдержках</strong></td>
+                            <td>ПТ-36, МР-55</td>
+                            <td>32-51</td>
+                            <td>3-8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Технологии Бурения. Все права защищены.</p>
+            <p> Зенько Татьяна УТС-25-2</p>
+        </div>
+    </footer>
+    <script>
+    function openTab(evt, tabId) {
+        document.querySelectorAll('.process-content').forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        evt.currentTarget.classList.add('active');
+    }
+</script>
+</body>
+</html>

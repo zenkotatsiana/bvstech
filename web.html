@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Технологии Бурения Взрывных Скважин</title>
+    <style>
+        :root {
+            --primary-color: #1B5E20; 
+            --secondary-color: #43A047; 
+            --dark-bg: #1a1a1a;
+            --light-bg: #f1f8e9; 
+            --text-main: #333;
+            --text-light: #e8f5e9;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --spacing-unit: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-main);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            margin-bottom: var(--spacing-unit);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color); 
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 40px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color); 
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff; 
+            border: 2px solid #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            color: #e8f5e9;
+        }
+
+        .nav-links a:hover {
+            color: #a5d6a7; 
+        }
+
+        .hero {
+            background: linear-gradient(rgba(27, 94, 32, 0.7), rgba(20, 60, 25, 0.8)), url('бвс.webp');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            text-align: center;
+            color: #e8f5e9;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .goals-section {
+            background-color: white;
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .goal-card {
+            background: var(--light-bg);
+            padding: 25px;
+            border-left: 5px solid var(--secondary-color); 
+            border-radius: 4px;
+            transition: transform 0.3s;
+        }
+
+        .goal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(27, 94, 32, 0.1);
+        }
+
+        .goal-card h3 {
+            color: var(--primary-color);
+        }
+
+        .structure-list {
+            margin-top: 30px;
+            background-color: #2e3b2e; 
+            color: #e8f5e9;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .structure-list h3 {
+            color: var(--secondary-color);
+            border-bottom: 1px solid #4caf50;
+            padding-bottom: 10px;
+        }
+
+        .structure-list ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .structure-list li::before {
+            content: "✓";
+            color: var(--secondary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+        }
+
+        footer {
+            background-color: #0d2810;
+            color: #a5d6a7;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 5px solid var(--secondary-color);
+        }
+
+        footer p {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">БВСТЕХ</div>
+                <div class="nav-links">
+                    <a href="web.html">Цели</a>
+                    <a href="web2.html">Процесс</a>
+                    <a href="web3.html">Оборудование</a>
+                    <a href="web4.html">Сравнение</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Бурение взрывных скважин</h1>
+            <p>Комплексные технические решения для карьеров и подземных выработок. Современные технологии, надежное оборудование и безопасность.</p>
+            <a href="web2.html" class="btn">Изучить процесс</a>
+        </div>
+    </section>
+
+    <section id="goals" class="goals-section">
+        <div class="container">
+            <h2>Цели и Структура проекта</h2>
+            
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <h3>Основная цель</h3>
+                    <p>Обеспечение подготовки горной массы к выемке посредством буровзрывных работ с максимальной эффективностью и минимальным экологическим воздействием.</p>
+                </div>
+                <div class="goal-card">
+                    <h3>Техническая цель</h3>
+                    <p>Достижение оптимальной степени дробления породы при соблюдении нормативов по расходу взрывчатых веществ (ВВ) и бурового инструмента.</p>
+                </div>
+                <div class="goal-card">
+                    <h3>Задачи безопасности</h3>
+                    <p>Соблюдение техники безопасности при ведении взрывных работ в условиях карьеров (открытые работы) и шахт (подземные работы).</p>
+                </div>
+            </div>
+
+            <div class="structure-list">
+                <h3>Структура информации</h3>
+                <ul>
+                    <li>Методы бурения (Карьер / Подземка)</li>
+                    <li>Буровая оснастка (Станки, Штанги, Долота)</li>
+                    <li>Технические параметры</li>
+                    <li>Сравнительная характеристика</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+<section id="goals" class="goals-section">
+        <div class="container">
+            <h2>Основные методы бурения</h2>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <strong>Шарошечное бурение</strong> - самый распространённый метод для пород средней и высокой крепости. Используются станки типа СБШ.
+                 </div>
+                 <div class="goal-card">
+                    <strong>Пневмоударное бурение (DTH)</strong> - эффективно в трещиноватых и абразивных породах. Высокая скорость проходки.
+                 </div>
+            </div>
+            <p></p>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <strong>Вращательное бурение</strong> - применяется в мягких и рыхлых породах (уголь, мел).
+                </div>
+                <div class="goal-card">
+                    <strong>Алмазное бурение</strong> - для твёрдых пород, чаще в разведочных целях.
+                </div>
+            </div>
+        </div>
+</section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Технологии Бурения. Все права защищены.</p>
+            <p> Зенько Татьяна УТС-25-2</p>
+        </div>
+    </footer>
+
+</body>
+</html>

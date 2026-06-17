@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Технологии Бурения Взрывных Скважин</title>
+    <style>
+        :root {
+    --primary-color: #1B5E20; 
+    --secondary-color: #43A047; 
+    --light-bg: #f1f8e9; 
+    --text-main: #333;
+    --text-light: #e8f5e9;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --spacing-unit: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-main);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: var(--spacing-unit);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 40px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    transition: color 0.3s;
+    color: #e8f5e9;
+}
+
+.nav-links a:hover {
+    color: #a5d6a7;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.goals-section {
+    background-color: white;
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.goal-card {
+    background: var(--light-bg);
+    padding: 25px;
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.goal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(27, 94, 32, 0.1);
+}
+
+.goal-card h3 {
+    color: var(--primary-color);
+}
+
+.equipment-section {
+    background-color: white;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.equip-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.equip-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(27, 94, 32, 0.15);
+    border-color: var(--secondary-color);
+}
+
+.equip-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.equip-img img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+.equip-item:hover .equip-img img {
+    transform: scale(1.1);
+}
+
+.equip-info {
+    padding: 20px;
+}
+
+.equip-info h3 {
+    color: var(--primary-color);
+}
+
+.table-section {
+    background-color: var(--light-bg);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #c8e6c9;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+tr:hover {
+    background-color: #f1f8e9;
+}
+
+footer {
+    background-color: #0d2810;
+    color: #a5d6a7;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 5px solid var(--secondary-color);
+}
+
+footer p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">БВСТЕХ</div>
+                <div class="nav-links">
+                    <a href="web.html">Цели</a>
+                    <a href="web2.html">Процесс</a>
+                    <a href="web3.html">Оборудование</a>
+                    <a href="web4.html">Сравнение</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+  <section id="equipment" class="equipment-section">
+        <div class="container">
+            <h2>Буровые станки и колонки</h2>
+            <div class="equipment-grid">
+                
+                <div class="equip-item">
+                    <div class="equip-img">
+                        <img src="сбш.jpg" alt="Станок буровой шарочный">
+                    </div>
+                    <div class="equip-info">
+                        <h3>СБШ (Станки Буровые Шарошечные)</h3>
+                        <p>Применяются на открытых работах для бурения скважин диаметром 160–320 мм в породах любой крепости. Используют шарошечные долота с опорой качения.</p>
+                    </div>
+                </div>
+
+                <div class="equip-item">
+                    <div class="equip-img">
+                        <img src="колонка.png" alt="Станок колонкового бурения">
+                    </div>
+                    <div class="equip-info">
+                        <h3>Колонковые установки</h3>
+                        <p>Используются для геологоразведки и бурения взрывных скважин сложной конфигурации. Забой инструментом (коронкой) разрушается по кольцевому периметру.</p>
+                    </div>
+                </div>
+
+                <div class="equip-item">
+                    <div class="equip-img">
+                        <img src="сбу.png" alt="Самоходная буровая установка">
+                    </div>
+                    <div class="equip-info">
+                        <h3>Самоходные установки (СБУ)</h3>
+                        <p>Многофункциональные машины на пневмошинном ходу. Идеальны для подземных работ и карьеров с сложной топографией. Оснащены телескопическими мачтами.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<section id="goals" class="goals-section">
+        <div class="container">
+            <h2>Примеры связки "Станок - Буровая колонка"</h2>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <strong>Пример 1. СБШ-250 (карьер) + колонка Ø 168 мм, замки З-64</strong> 
+                    <p>Станок передаёт крутящий момент 55 кН·м. Колонка набирается из труб длиной 6 м. Внизу — шарошечное долото 250 мм.</p>
+                 </div>
+                 <div class="goal-card">
+                    <strong>Пример 2. Simba M7 (подземный) + шестигранные штанги 32 мм, R38</strong> 
+                    <p>Веер скважин глубиной 20 м. Колонка состоит из штанг 1.5 м. Забойный пневмоударник COP 66.</p>
+                 </div>
+                 <div class="goal-card">
+                    <strong>Пример 3. Ручной перфоратор + гексагональные штанги 22 мм</strong> 
+                    <p>Для бурения шпуров в тоннелях. Колонка — 1-2 штанги с муфтовым соединением.</p>
+                 </div>
+            </div>
+        </div>
+</section> 
+<section id="table" class="table-section">
+        <div class="container">
+            <h2>Таблица совместимости станков и колонок</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Станок (тип)</th>
+                            <th>Рекомендуемая колонка</th>
+                            <th>Тип резьбы</th>
+                            <th>Макс. крутящий момент</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>СБШ-250</td>
+                            <td>Труба 168х10 мм, замок З-64</td>
+                            <td>Трапецеидальная</td>
+                            <td>55 кН·м</td>
+                        </tr>
+                         <tr>
+                            <td>DM45 (Epiroc)</td>
+                            <td>Труба 114х8 мм / 140х10 мм</td>
+                            <td>API Reg 3.5″</td>
+                            <td>45 кН·м</td>
+                        </tr>
+                        <tr>
+                            <td>Simba M7</td>
+                            <td>Шестигранник 32 мм / труба 76 мм</td>
+                            <td>R38 / T45</td>
+                            <td>12 кН·м</td>
+                        </tr>
+                        <tr>
+                            <td>ПТ-36 (пневмоподдержка)</td>
+                            <td>Штанга 22 мм</td>
+                            <td>Коническая R25</td>
+                            <td>0.8 кН·м (ручная подача)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Технологии Бурения. Все права защищены.</p>
+            <p> Зенько Татьяна УТС-25-2</p>
+        </div>
+    </footer>
+</body>
+</html>
